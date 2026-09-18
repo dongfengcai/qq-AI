@@ -1,0 +1,6 @@
+name: astrbot_plugin_balance_guard
+display_name: 余额守护
+desc: 监控 DeepSeek 账户余额，低于红线时告警并熔断，停止回复以控制消耗
+version: v1.0.0
+author: dsh-deploy
+repo: ""
