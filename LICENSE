@@ -1,0 +1,44 @@
+MIT License
+
+Copyright (c) 2026 dongfengcai
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 第三方组件
+
+本项目自身代码采用 MIT，但它编排并依赖以下第三方组件，各自适用其原有许可：
+
+| 组件 | 用途 | 许可 |
+|---|---|---|
+| [AstrBot](https://github.com/AstrBotDevs/AstrBot) | 机器人框架（Docker 镜像） | AGPL-3.0 |
+| [NapCat](https://github.com/NapNeko/NapCatQQ) | QQ 协议端（Docker 镜像） | 见其仓库 |
+| [DeepSeek API](https://platform.deepseek.com/) | 大语言模型服务 | 商业服务条款 |
+| [Cordis](https://github.com/cordiverse/cordis) | 插件框架 | MIT |
+
+本项目**不包含**上述组件的代码，只在运行时通过 Docker 镜像和 HTTP 接口使用它们。
+使用者需自行遵守各组件的许可与条款。
+
+## 关于使用非官方 QQ 协议端
+
+NapCat 是基于逆向工程的**非官方** QQ 协议实现，使用它可能违反腾讯的服务条款，
+并存在**账号被封禁**的风险。本项目仅提供编排与插件代码，不对使用后果负责。
+
+请在使用前自行评估风险，并优先考虑腾讯官方开放平台。
