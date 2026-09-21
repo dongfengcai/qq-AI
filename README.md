@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![AstrBot](https://img.shields.io/badge/AstrBot-4.x-blue.svg)](https://github.com/AstrBotDevs/AstrBot)
-[![Platform](https://img.shields.io/badge/platform-linux-lightgrey.svg)](#环境要求)
+[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows-lightgrey.svg)](#环境要求)
 
 把 AI 接入 QQ，让它像真人一样聊天 —— 有固定人设、能记住谁在说话、会对戳一戳有反应、会发表情包。
 
@@ -10,7 +10,14 @@
 技术上基于 [AstrBot](https://github.com/AstrBotDevs/AstrBot) + [NapCat](https://github.com/NapNeko/NapCatQQ)，
 由 6 个自研插件补齐「像真人」所需的细节。
 
-> **一条命令部署**：`sudo bash deploy.sh`
+**先选版本 —— 两个版本功能完全一样**（同一套 6 个插件、同一份人设、同一套行为逻辑）：
+
+| 你的情况 | 用哪个 |
+|---|---|
+| 有云服务器，想 7×24 挂着不掉线 | **Linux 服务器版** —— 就是本仓库 |
+| 想在自己电脑上跑，不想碰命令行、不想装 Docker | **[🪟 Windows 版](https://github.com/dongfengcai/whale-girl-chat-ai-windows)** —— 解压后双击 `安装.cmd` 就行 |
+
+> **Linux 一条命令部署**：`sudo bash deploy.sh`
 > 自动装 Docker、配 swap、起服务、装 6 个插件、写配置。
 
 ## 效果
@@ -79,6 +86,9 @@ QQ 用户 ──▶ QQ 服务器 ──▶ NapCat（协议端）──▶ AstrBo
 ---
 
 ## 环境要求
+
+> 🪟 **Windows 用户不用看这一节。** Windows 版不需要服务器、也不需要 Docker ——
+> 一台 Windows 10/11 电脑就够，见 [whale-girl-chat-ai-windows](https://github.com/dongfengcai/whale-girl-chat-ai-windows)。
 
 ### 服务器
 
@@ -214,7 +224,7 @@ docker compose logs astrbot | grep -i password
 
 然后按[部署后的配置](#部署后的配置)一节逐项设置。
 
-### 步骤 5：验证
+### 步骤 5：��证
 
 在 QQ 里私聊机器人发「你好」，应该能收到回复。
 
@@ -263,7 +273,7 @@ docker compose logs astrbot | grep "Loading plugin astrbot_plugin_"
 1. 表情标记（`[表情:开心]`）会**外露在聊天文本里**
 2. 日志会出现 `Plugins that depend on the pre-send event hook may not work correctly`
 
-关掉后标记被干净摘掉，图文在同一条消息里。**而且聊天机器人本来就不该逐字蹦字**，一次说完更像真人。
+关掉后标记被干净摘掉，图文在同一条消息里。**而且聊天机器人本来就不该逐字蹦字**，一��说完更像真人。
 
 ### ④ 打开分段回复
 
@@ -370,7 +380,7 @@ docker compose logs astrbot | grep -iE "aiocqhttp|adapter|connected"
 
 **鲸鱼娘·回应仲裁**（`astrbot_plugin_reply_arbiter`）
 
-| 项 | 默认 | 说明 |
+| 项 | 默认 | 说�� |
 |---|---|---|
 | `merge_window_ms` | `2000` | 合并窗口，收住连发的 @ |
 | `context_window_seconds` | `300` | 判定「一直在聊」的回看时长 |
@@ -668,7 +678,7 @@ ports:
 后者等于 `0.0.0.0`，**任何能访问服务器的人都能打开你的面板**。
 绑回环之后，即使安全组配错了，公网也打不到。
 
-`6199`（OneBot 控制通道）**完全没有发布** —— 连上它就能以机器人身份发消息。
+`6199`（OneBot 控制通道）**完全没有发布** —— 连上它就能以机器人身份���消息。
 
 ### API Key 安全
 
